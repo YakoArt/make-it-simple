@@ -1,0 +1,32 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "FC Barcelona",
+      "description": "The best football team in the world!"
+    },
+    {
+      "id": 2,
+      "title": "Real Madrid",
+      "description": "The worst football team in the world222!"
+    }
+  ],
+  "citizens": [
+    {
+      "id": "2ba8d5ab-d649-4285-be6c-5308fa1a2782",
+      "firstname": "Александр",
+      "surname": "Яковлев",
+      "patronymic": "Олегович",
+      "gender": "male",
+      "birthday": "08.07.1986",
+      "phoneInfo": {
+        "mobile": "8 (913) 726-06-07",
+        "home": "346-06-07"
+      },
+      "emails": [
+        "yakovlev.alex.o@gmail.com",
+        "yakovlev.alex.o@yandex.ru"
+      ]
+    }
+  ]
+}

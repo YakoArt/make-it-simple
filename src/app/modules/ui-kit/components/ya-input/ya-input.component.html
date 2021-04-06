@@ -1,0 +1,13 @@
+<div class="form-field" [formGroup]="basicForm">
+  <label>
+    <span>{{ label }}</span>
+    <input
+      type="text"
+      [name]="fieldName"
+      [formControlName]="fieldName"
+      [readonly]="readonly"
+      (input)="onChangeValue()"
+      (focus)="onFocus()"
+    >
+  </label>
+</div>

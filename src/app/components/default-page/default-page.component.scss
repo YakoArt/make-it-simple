@@ -1,0 +1,13 @@
+.page-container {
+  margin: 20px;
+
+  .form-wrapper {
+    width: 320px;
+  }
+
+  .form::ng-deep .form-field {
+      margin: 10px 0;
+  }
+}
+
+

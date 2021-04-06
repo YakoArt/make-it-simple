@@ -1,0 +1,25 @@
+<header ya-media-query class="header">
+  <div class="logo">
+    <img
+      class="logo__image"
+      src="../../../assets/images/angular-logo.svg"
+      alt="логотип">
+  </div>
+  <div>
+    <p class="togo__title">Make it simple</p>
+  </div>
+  <nav class="menu">
+    <ul class="menu__list">
+      <li class="menu__item"><a class="menu__link" routerLink="/">Домой</a></li>
+      <li class="menu__item"><a class="menu__link" routerLink="./rf-example">Пример 1</a></li>
+      <li class="menu__item"><a class="menu__link menu__link--inactive">Пример 2</a></li>
+    </ul>
+  </nav>
+  <button class="menu__button" type="button">
+    <img
+      class="menu__img"
+      src="../../../assets/images/menu.svg"
+      alt="навигация">
+  </button>
+</header>
+<router-outlet></router-outlet>

@@ -1,0 +1,27 @@
+<div class="page-container">
+  <h2>Гражданин</h2>
+  <div class="form-wrapper">
+    <form class="form" [formGroup]="citizenForm">
+
+      <ya-input label="Имя" name="firstname" formControlName="firstname"></ya-input>
+      <ya-input label="Фамилия" name="surname" formControlName="surname"></ya-input>
+      <ya-input label="Отчество" name="patronymic" formControlName="patronymic"></ya-input>
+
+      <div formGroupName="phoneInfo">
+        <h4>Телефонные номера:</h4>
+        <ya-input label="Мобильный" name="mobile" formControlName="mobile"></ya-input>
+        <ya-input label="Домашний" name="home" formControlName="home"></ya-input>
+      </div>
+
+      <div formArrayName="emails">
+        <h4>Почта:</h4>
+        <ng-container *ngFor="let control of emails.controls; let i=index">
+          <ya-input label="'Почта '{{i + 1}}" formControlName="{{i}}"></ya-input>
+        </ng-container>
+      </div>
+
+      <button type="button" (click)="onClick()">Отправить</button>
+    </form>
+    <p>{{ citizenFormData }}</p>
+  </div>
+</div>

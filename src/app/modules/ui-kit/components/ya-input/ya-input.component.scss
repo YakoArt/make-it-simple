@@ -1,0 +1,10 @@
+.form-field {
+  label, span, input {
+    display: block;
+    width: 100%;
+  }
+
+  input {
+    box-sizing: border-box;
+  }
+}
