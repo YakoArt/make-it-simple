@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { ControlContainer, FormArray, FormBuilder, FormControl, FormGroup, FormGroupDirective } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { BaseComponent } from '../../modules/app-common/components';
+import { CitizenDto } from '../../models/dto/citizen.dto';
 
 @Component({
   selector: 'app-default-page',
@@ -41,6 +42,10 @@ export class DefaultPageComponent extends BaseComponent implements OnInit {
       }),
       emails: this.fb.array([]),
     });
+
+    const obj = new CitizenDto();
+    console.log(obj);
+
 
     this.citizen$.pipe(this.takeUntilDestroy())
     .subscribe((citizen) => {
