@@ -3,7 +3,6 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { BaseComponent } from '../../modules/app-common/components';
-import { CitizenDto } from '../../models/dto/citizen.dto';
 
 @Component({
   selector: 'app-default-page',
@@ -18,6 +17,7 @@ export class DefaultPageComponent extends BaseComponent implements OnInit {
   /** Запрос к БД */
   public citizen$: Observable<any> = this.http.get('/api/citizens/2ba8d5ab-d649-4285-be6c-5308fa1a2782');
 
+  count: number = 0;
   constructor(
     private http: HttpClient,
     private fb: FormBuilder,
@@ -42,10 +42,6 @@ export class DefaultPageComponent extends BaseComponent implements OnInit {
       }),
       emails: this.fb.array([]),
     });
-
-    const obj = new CitizenDto();
-    console.log(obj);
-
 
     this.citizen$.pipe(this.takeUntilDestroy())
     .subscribe((citizen) => {

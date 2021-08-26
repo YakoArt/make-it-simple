@@ -1,25 +1,30 @@
-<header ya-media-query class="header">
-  <div class="logo">
-    <img
-      class="logo__image"
-      src="../../../assets/images/angular-logo.svg"
-      alt="логотип">
+<div class="app-container">
+  <header ya-media-query class="header">
+    <div class="logo">
+      <img
+        class="logo__image"
+        src="../../../assets/images/angular-logo.svg"
+        alt="логотип">
+      <div>
+        <p class="logo__title">Make it simple</p>
+      </div>
+    </div>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a class="menu__link" routerLink="/">Домой</a></li>
+        <li class="menu__item"><a class="menu__link" routerLink="./rf-example">Пример 1</a></li>
+        <li class="menu__item"><a class="menu__link menu__link--inactive">Пример 2</a></li>
+      </ul>
+    </nav>
+    <button class="menu__button" type="button">
+      <img
+        class="menu__img"
+        src="../../../assets/images/menu.svg"
+        alt="навигация">
+    </button>
+  </header>
+  <div class="loader" *ngIf="loading"></div>
+  <div class="content-wrapper">
+    <router-outlet></router-outlet>
   </div>
-  <div>
-    <p class="togo__title">Make it simple</p>
-  </div>
-  <nav class="menu">
-    <ul class="menu__list">
-      <li class="menu__item"><a class="menu__link" routerLink="/">Домой</a></li>
-      <li class="menu__item"><a class="menu__link" routerLink="./rf-example">Пример 1</a></li>
-      <li class="menu__item"><a class="menu__link menu__link--inactive">Пример 2</a></li>
-    </ul>
-  </nav>
-  <button class="menu__button" type="button">
-    <img
-      class="menu__img"
-      src="../../../assets/images/menu.svg"
-      alt="навигация">
-  </button>
-</header>
-<router-outlet></router-outlet>
+</div>
